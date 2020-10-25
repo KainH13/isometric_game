@@ -132,8 +132,48 @@ class MyGame(arcade.Window):
             self.player_sprite.center_y = y
         
     def on_mouse_release(self, x, y, dx, dy):
-        self.player_sprite.center_x = x
-        self.player_sprite.center_y = y
+        # Find mouse angle and turn ship to face mouse
+        delta_x = x - self.player_sprite.center_x
+        delta_y = y - self.player_sprite.center_y
+        angle = math.atan2(delta_y, delta_x)
+        self.player_sprite.angle = math.degrees(angle)
+
+        # Move ship
+        self.player_sprite.change_x = math.cos(angle) * -MOVEMENT_SPEED
+        self.player_sprite.change_y = math.sin(angle) * MOVEMENT_SPEED
+
+        # length_delta = math.sqrt((delta_x**2) + (delta_y**2))
+        # angle_delta = math.asin(delta_x / length_delta)
+        
+
+
+
+
+        # while angle_delta != 0:
+        #     if angle_delta > 0:
+        #         self.player_sprite.change_angle = ANGLE_SPEED
+        #     elif angle_delta < 0:
+        #         self.player_sprite.change_angle = -ANGLE_SPEED
+        #     delta_x = x - self.player_sprite.center_x
+        #     delta_y = y - self.player_sprite.center_y
+        #     length_delta = math.sqrt((delta_x**2) + (delta_y**2))
+        #     angle_delta = math.asin(delta_x / length_delta)
+        #     print(angle_delta)
+
+        # self.player_sprite.change_angle = 0
+
+
+
+        # if angle_delta > 0.2:
+        #     self.player_sprite.change_angle = ANGLE_SPEED
+        # elif angle_delta < -0.2:
+        #     self.player_sprite.change_angle = -ANGLE_SPEED
+        # else:
+        #     self.player_sprite.change_angle = 0
+
+            
+        # self.player_sprite.center_y = y
+        # self.player_sprite.center_x = x
 
 
 def main():
