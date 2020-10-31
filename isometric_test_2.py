@@ -135,8 +135,13 @@ class MyGame(arcade.Window):
         # Find mouse angle and turn ship to face mouse
         delta_x = x - self.player_sprite.center_x
         delta_y = y - self.player_sprite.center_y
-        angle = math.atan2(delta_y, delta_x)
-        self.player_sprite.angle = math.degrees(angle)
+        angle = math.atan2(delta_x, delta_y)
+        print("radian angle: {:.2f}".format(angle))
+        degreeAngle = math.degrees(angle)*-1
+        print("degree angle: {:.2f}".format(degreeAngle))
+        self.player_sprite.angle = degreeAngle
+        self.player_sprite.center_x = x
+        self.player_sprite.center_y = y
 
         # Move ship
         self.player_sprite.change_x = math.cos(angle) * -MOVEMENT_SPEED
