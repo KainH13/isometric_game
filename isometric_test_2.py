@@ -9,6 +9,7 @@ python -m arcade.examples.sprite_move_angle
 import arcade
 import os
 import math
+import time
 
 SPRITE_SCALING = 0.5
 
@@ -42,6 +43,7 @@ class Player(arcade.Sprite):
         # Use math to find our change based on our speed and angle
         self.center_x += -self.speed * math.sin(angle_rad)
         self.center_y += self.speed * math.cos(angle_rad)
+        # print("sprite_x: {0:5f}".format(self.center_x))
 
 
 class MyGame(arcade.Window):
@@ -140,16 +142,23 @@ class MyGame(arcade.Window):
         degreeAngle = math.degrees(angle)*-1
         print("degree angle: {:.2f}".format(degreeAngle))
         self.player_sprite.angle = degreeAngle
-        self.player_sprite.center_x = x
-        self.player_sprite.center_y = y
+        print("x: {0:5d}, sprite_x.position: {0:5d}".format(x, self.player_sprite.position))
+        self.player_sprite.speed = MOVEMENT_SPEED
+       
+        # self.player_sprite.center_x = x
+        # self.player_sprite.center_y = y
 
         # Move ship
-        self.player_sprite.change_x = math.cos(angle) * -MOVEMENT_SPEED
-        self.player_sprite.change_y = math.sin(angle) * MOVEMENT_SPEED
-
+        # self.player_sprite.change_x = math.cos(angle) * -MOVEMENT_SPEED
+        # self.player_sprite.change_y = math.sin(angle) * MOVEMENT_SPEED
+        # while (self.player_sprite.center_x < x):
+        #     self.player_sprite.speed = MOVEMENT_SPEED
+        #     print("x: {0:5d}, sprite_x: {0:5d}".format(x, self.player_sprite.center_x))
+        #     time.sleep(3)
+        # self.player_sprite.change_y = math.sin(angle) * MOVEMENT_SPEED
         # length_delta = math.sqrt((delta_x**2) + (delta_y**2))
         # angle_delta = math.asin(delta_x / length_delta)
-        
+        # self.player_sprite.speed = 0
 
 
 
@@ -179,7 +188,6 @@ class MyGame(arcade.Window):
             
         # self.player_sprite.center_y = y
         # self.player_sprite.center_x = x
-
 
 def main():
     """ Main method """
