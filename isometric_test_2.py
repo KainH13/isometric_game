@@ -132,7 +132,17 @@ class MyGame(arcade.Window):
         if button == 1:
             self.player_sprite.center_x = x
             self.player_sprite.center_y = y
-        
+            # Find mouse angle and turn ship to face mouse
+            delta_x = x - self.player_sprite.center_x
+            delta_y = y - self.player_sprite.center_y
+            angle = math.atan2(delta_x, delta_y)
+            print("radian angle: {:.2f}".format(angle))
+            degreeAngle = math.degrees(angle)*-1
+            print("degree angle: {:.2f}".format(degreeAngle))
+            self.player_sprite.angle = degreeAngle
+            print("x: {0:5d}, sprite_x.position: {0:5d}".format(x, self.player_sprite.position))
+            self.player_sprite.speed = MOVEMENT_SPEED
+            
     def on_mouse_release(self, x, y, dx, dy):
         # Find mouse angle and turn ship to face mouse
         delta_x = x - self.player_sprite.center_x
