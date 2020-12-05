@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="right-down" width="25" height="25" tilewidth="128" tileheight="128" infinite="0" backgroundcolor="#e4d26a" nextlayerid="3" nextobjectid="1">
+ <tileset firstgid="1" name="tree" tilewidth="15" tileheight="30" tilecount="1" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="15" height="30" source="assets/used/tree.png"/>
+   <objectgroup draworder="index" id="3">
+    <object id="2" x="5.45769" y="0.170553">
+     <polygon points="0,0 -3.24051,4.09327 -5.45769,11.9387 -5.45769,19.6136 -2.38774,23.7069 -0.682212,29.1646 3.06995,29.1646 4.77548,23.8774 8.01599,19.2725 8.18654,12.4504 5.96935,4.09327 2.72885,0.170553"/>
+    </object>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <layer id="1" name="Tile Layer 1" width="25" height="25">
+  <data encoding="base64" compression="zlib">
+   eJxjYIAARobhARjRMAMWmlLz0WlsbGrYg89savkFV9hQOz3gcjst7aElGC75ZRSMglEwCkbB0AUA7xwAHQ==
+  </data>
+ </layer>
+ <objectgroup id="2" name="Trees"/>
+</map>

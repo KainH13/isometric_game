@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="right-down" width="25" height="25" tilewidth="128" tileheight="128" infinite="0" backgroundcolor="#e4d26a" nextlayerid="4" nextobjectid="1">
+ <tileset firstgid="1" name="cactus" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="assets/used/cactus.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="2" name="grass_sprout" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="assets/used/grass_sprout.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="3" name="alienBlue_front" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="assets/used/alienBlue_front.png" width="131" height="188"/>
+ </tileset>
+ <layer id="3" name="Trees" width="25" height="25">
+  <data encoding="base64" compression="zlib">
+   eJy1VkkSwDAIMv//dK8dJ1FA5BKzDGKMthERJzgg508aK47qbN7rfKOxqDG8bJaHReUXuTfF/0Rv57vift2XU0+3V80Ze6o5A3n/zNt+cbrXUC0K0Fxt+GZ4b7lRajfbWzHcgPQVps6mUPK7pd0ZG/r9ZGtdhaMX/zVPeoRa364+4/zHUHjy/AP9PwBh
+  </data>
+ </layer>
+</map>
